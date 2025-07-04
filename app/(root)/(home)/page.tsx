@@ -2,7 +2,6 @@ import React from "react";
 import dayjs from "dayjs";
 import MeetingTypeList from "@/components/MeetingTypeList";
 
-
 const HomeLayout = () => {
   const formattedDate = dayjs(Date.now()).format("dddd, MMMM D, YYYY");
   const time = dayjs().format("HH:mm A");
@@ -16,7 +15,9 @@ const HomeLayout = () => {
           </h2>
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-extrabold lg:text-7xl">{time}</h1>
-            <p className="text-lg text-sky-1 font-medium lg:text-2xl">{formattedDate}</p>
+            <p className="text-lg text-sky-1 font-medium lg:text-2xl">
+              {formattedDate}
+            </p>
           </div>
         </div>
       </div>
