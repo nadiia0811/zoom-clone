@@ -1,11 +1,12 @@
+import StreamClientProvider from "@/providers/StreamClientProvider";
 import { ReactNode } from "react";
 
-const RootLayout = ({children}: {children: ReactNode}) => {
+const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <main> 
-      { children }
+    <main>
+      <StreamClientProvider>{children}</StreamClientProvider>
     </main>
-  )
-}
+  );
+};
 
 export default RootLayout;
