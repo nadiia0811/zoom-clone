@@ -11,8 +11,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Yoom",
-  description: "Zoom clone built with Next.js, TypeScript, and Tailwind CSS",
+  title: "YOOM",
+  description: "Video calling app",
+  icons: {
+    icon: "/icons/logo.svg"
+  }
 };
 
 export default function RootLayout({
