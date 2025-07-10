@@ -6,7 +6,6 @@ import { Button } from "./ui/button";
 import { avatarImages } from "@/constants";
 import { toast } from "sonner";
 
-
 interface MeetingCardProps {
   title: string;
   date: string;
@@ -28,7 +27,6 @@ const MeetingCard = ({
   link,
   buttonText,
 }: MeetingCardProps) => {
-
   return (
     <section className="flex min-h-[258px] w-full flex-col justify-between rounded-[14px] bg-dark-1 px-5 py-8 xl:max-w-[568px]">
       <article className="flex flex-col gap-5">
@@ -59,7 +57,10 @@ const MeetingCard = ({
         </div>
         {!isPreviousMeeting && (
           <div className="flex gap-2">
-            <Button onClick={handleClick} className="rounded bg-blue-1 px-6">
+            <Button
+              onClick={handleClick}
+              className="rounded bg-blue-1 px-6 text-white hover:bg-blue-1 cursor-pointer"
+            >
               {buttonIcon1 && (
                 <Image src={buttonIcon1} alt="feature" width={20} height={20} />
               )}
@@ -70,7 +71,7 @@ const MeetingCard = ({
                 navigator.clipboard.writeText(link);
                 toast.success("Link copied");
               }}
-              className="bg-dark-4 px-6"
+              className="bg-dark-4 px-6 text-white hover:bg-dark-4 cursor-pointer"
             >
               <Image
                 src="/icons/copy.svg"
