@@ -9,10 +9,10 @@ interface MeetingModalProps {
   onClose: () => void;
   title: string;
   className?: string;
-  children?: ReactNode;
   image?: string;
   buttonIcon?: string;
   buttonText?: string;
+  children?: ReactNode;
   handleClick?: () => void;
 }
 
@@ -25,7 +25,7 @@ const MeetingModal = ({
   image,
   buttonIcon,
   buttonText,
-  handleClick,
+  handleClick
 }: MeetingModalProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
