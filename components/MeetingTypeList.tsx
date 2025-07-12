@@ -61,7 +61,7 @@ const MeetingTypeList = () => {
 
       setCallDetails(call);
 
-      if (!values.description) {
+      if (meetingState === "isInstantMeeting") {
         router.push(`/meeting/${call.id}`);
       }
 
@@ -88,7 +88,6 @@ const MeetingTypeList = () => {
           onClose={() => setMeetingState(undefined)}
           title="Create Meeting"
           className="text-center"
-          buttonText="Create Meeting"
           handleClick={createMeeting}
         >
           <div className="flex flex-col gap-2.5">
