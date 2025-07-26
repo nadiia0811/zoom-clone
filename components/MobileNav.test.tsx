@@ -37,7 +37,7 @@ describe("MobileNav", () => {
   });
 
   it("highlights the active link based on pathname", async () => {
-    const mockedPathname = vite.mocked(usePathname);
+    const mockedPathname = vi.mocked(usePathname);
     mockedPathname.mockReturnValue("/some-path");
 
     render(<MobileNav />);
